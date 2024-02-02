@@ -1,0 +1,120 @@
+{{block "and-operator" .}}
+<div class="flex flex-col space-y-8">
+  <div class="pt-8">
+    <h1 class="text-xl font-medium text-center">AND Operator</h1>
+  </div>
+  <div class="mx-auto w-4/5">
+    <p class="font-thin text-sm text-center px-4">
+    The <span class="italic">AND operator</span>, denoted by &&, is a logical operator that returns true only if both of its operands are true. Otherwise, it returns false.<br />
+    <span class="font-medium">Example:</span> If both condition A and condition B are true, A && B evaluates to true; otherwise, it evaluates to false.
+    </p>
+  </div>
+
+  <form
+    hx-put="/and-operator"
+    hx-trigger="change"
+    hx-swap="none"
+    class="w-4/5 mx-auto flex justify-evenly"
+  >
+    <div class="flex flex-col items-center">
+      <label for="a">A</label>
+      <input name="a" type="checkbox" value="1" />
+    </div>
+
+    <div class="flex flex-col items-center">
+      <label for="b">B</label>
+      <input name="b" type="checkbox" value="1" />
+    </div>
+  </form>
+
+  <!-- button group -->
+  <div class="w-full mx-auto flex space-x-4">
+    <button
+      hx-get="/or-operator"
+      class="bg-orange-800 hover:bg-orange-600 rounded-lg border border-orange-600 font-medium px-4 py-2 w-1/2 ml-auto"
+    >
+      Next
+    </button>
+  </div>
+</div>
+{{end}} {{define "or-operator"}}
+<div class="flex flex-col space-y-8">
+  <div class="pt-8">
+    <h1 class="text-xl font-medium text-center">OR Operator</h1>
+  </div>
+  <div class="mx-auto w-4/5">
+    <p class="font-thin text-sm text-center px-4">
+    The <span class="italic">OR operator</span>, denoted by ||, is a logical operator that returns true if at least one of its operands is true. It returns false only if both operands are false.<br />
+            <span class="font-medium">Example:</span> If either condition A or condition B is true, A || B evaluates to true. It evaluates to false only if both A and B are false.
+    </p>
+  </div>
+
+  <form
+    hx-put="/or-operator"
+    hx-trigger="change"
+    hx-swap="none"
+    class="w-4/5 mx-auto flex justify-evenly"
+  >
+    <div class="flex flex-col items-center">
+      <label for="a">A</label>
+      <input name="a" type="checkbox" value="1" />
+    </div>
+
+    <div class="flex flex-col items-center">
+      <label for="b">B</label>
+      <input name="b" type="checkbox" value="1" />
+    </div>
+  </form>
+
+  <!-- button group -->
+  <div class="w-full mx-auto flex space-x-4">
+    <button
+      hx-get="/and-operator"
+      class="bg-orange-800 hover:bg-orange-600 rounded-lg border border-orange-600 font-medium px-4 py-2 w-1/2 ml-auto"
+    >
+      Back
+    </button>
+
+    <button
+      hx-get="/not-operator"
+      class="bg-orange-800 hover:bg-orange-600 rounded-lg border border-orange-600 font-medium px-4 py-2 w-1/2"
+    >
+      Next
+    </button>
+  </div>
+</div>
+{{end}} {{define "not-operator"}}
+<div class="flex flex-col space-y-8">
+  <div class="pt-8">
+    <h1 class="text-xl font-medium text-center">NOT Operator</h1>
+  </div>
+  <div class="mx-auto w-4/5">
+    <p class="font-thin text-sm text-center px-4">
+    The <span class="italic">NOT operator</span>, denoted by !, is a unary logical operator that negates the truth value of its operand. If the operand is true, ! returns false; if the operand is false, ! returns true.<br />
+    <span class="font-medium">Example:</span> If condition A is true, !A evaluates to false. If A is false, !A evaluates to true.
+    </p>
+  </div>
+
+  <form
+    hx-put="/not-operator"
+    hx-trigger="change"
+    hx-swap="none"
+    class="w-4/5 mx-auto flex justify-evenly"
+  >
+    <div class="flex space-y-2 flex-col items-center">
+      <label for="a">On/Off</label>
+      <input name="a" checked type="checkbox" value="1" />
+    </div>
+  </form>
+
+  <!-- button group -->
+  <div class="w-full mx-auto flex space-x-4">
+    <button
+      hx-get="/or-operator"
+      class="bg-orange-800 hover:bg-orange-600 rounded-lg border border-orange-600 font-medium px-4 py-2 w-1/2 mr-auto"
+    >
+      Back
+    </button>
+  </div>
+</div>
+{{end}}
