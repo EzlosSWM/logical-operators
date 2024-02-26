@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/output.css" />
+    <script src="./static/htmx/htmx.min.js"></script>
+    <title>Logical Operators</title>
+  </head>
+  <body hx-boost="true" class="bg-zinc-900 text-zinc-50">
+    <main class="max-w-5xl lg:mx-auto p-12 space-y-4">
+      <h1 class="text-center text-3xl">Logical Operators</h1>
+
+      {{template "operators" .}}
+    </main>
+    <footer class="fixed bottom-0 py-4 w-full mx-auto">
+      <p class="font-thin text-center">Carlos Gomez &copy; {{.Year}}</p>
+    </footer>
+  </body>
+</html>

@@ -6,11 +6,11 @@ import (
 
 func ParseTemplates() (*template.Template, error) {
 	templateBuilder := template.New("")
-	if t, _ := templateBuilder.ParseGlob("views/*/*.html"); t != nil {
+	if t, _ := templateBuilder.ParseGlob("public/*/*.html"); t != nil {
 		templateBuilder = t
 	}
 
-	return templateBuilder.ParseGlob("views/*.html")
+	return templateBuilder.ParseGlob("public/*.html")
 }
 
 

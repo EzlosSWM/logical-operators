@@ -11,6 +11,21 @@ Logical operators is a simple application made with Go, HTMX & TailwindCSS to de
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+## Installation
+
+### Requirements
+1. Install TailwindCSS
+2. make (optional)
+3. air (optional)
+
+```Shell 
+go mod download
+
+# if you don't have make installed 
+go run cmd/api/main.go
+
+```
+
 ## MakeFile
 
 run all make commands with clean tests

@@ -26,7 +26,7 @@ func (s *Server) RegisterRoutes() http.Handler {
 
 func (s *Server) handler(w http.ResponseWriter, r *http.Request) {
 	year := strconv.Itoa(time.Now().Year())
-	s.templ.ExecuteTemplate(w, "main", map[string]string{"Year": year})
+	s.templ.ExecuteTemplate(w, "index.html", map[string]string{"Year": year})
 }
 
 func (s *Server) andOperator(w http.ResponseWriter, r *http.Request) {
