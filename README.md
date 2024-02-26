@@ -13,11 +13,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Installation
 
-### Requirements
-1. Install TailwindCSS
-2. make (optional)
-3. air (optional)
-
 ```Shell 
 go mod download
 
@@ -25,6 +20,12 @@ go mod download
 go run cmd/api/main.go
 
 ```
+
+### Requirements
+1. Install TailwindCSS
+2. make (optional)
+3. air (optional)
+
 
 ## MakeFile
 
